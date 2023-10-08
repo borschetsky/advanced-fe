@@ -3,6 +3,7 @@ import 'app/styles/index.scss';
 import { Link } from 'react-router-dom';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { AppRouter } from './providers/router';
+import { Navbar } from 'widgets/Navbar';
 
 
 
@@ -11,9 +12,7 @@ const App = () => {
 
   return (
     <div className={classNames('app', {hovered: true}, [theme])}>
-      <button onClick={toggleTheme}>Toggle</button>
-      <Link to={'/'}>Main Page</Link>
-      <Link to={'/about'}>About Page</Link>
+      <Navbar />
       <AppRouter />
     </div>);
 };
